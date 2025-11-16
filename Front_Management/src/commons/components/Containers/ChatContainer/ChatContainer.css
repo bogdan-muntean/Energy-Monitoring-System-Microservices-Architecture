@@ -1,0 +1,61 @@
+.message {
+
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.users-container {
+    display: flex;
+    height: 126px;
+    overflow-x: scroll;
+    text-align: center;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.user-container {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.user-container:hover {
+    background-color: #f0e268; /* Schimbă culoarea la hover */
+}
+
+.user-container.selected {
+    background-color: #b2f547; /* Evidențiază utilizatorul selectat */
+    font-weight: bold; /* Îngroașă textul */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-photo {
+    display: inline-block;
+}
+
+.message-sent {
+    text-align: end;
+
+    .user-details {
+        direction: rtl;
+    }
+}
+
+.status {
+    text-align: end;
+}
+
+.status-connected, .status-disconnected {
+    text-align: start;
+}

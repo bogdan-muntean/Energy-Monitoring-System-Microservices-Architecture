@@ -1,0 +1,19 @@
+// import axios from 'axios';
+
+// const API_URL = "http://localhost:8082/conversations";
+
+// const ConversationService = {
+//     getAllConversations: async () => {
+//         try {
+//             const response = await axios.get(`${API_URL}/get-all`)
+//             return response.data;
+//         } catch (error) {
+//             console.error('Error fetching conversations:', error);
+//             throw error;
+//         }
+//     }
+
+//     // getConversationsForUserId: async ()
+// }
+
+// export default ConversationService;

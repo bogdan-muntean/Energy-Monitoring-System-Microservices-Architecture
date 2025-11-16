@@ -1,0 +1,173 @@
+.client-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.back-button {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #303f9f;
+}
+
+.device-list-container {
+    width: 60%;
+    height: 100%;
+    padding-top: 25px;
+    overflow-y: scroll;
+}
+
+.device-list-container h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.device-list-container p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.list-root {
+    width: 100%;
+}
+
+.list-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.list-item-primary {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.text-secondary {
+    color: #555;
+    font-size: 0.95em;
+    display: inline-block;
+}
+
+.conversation {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.notification {
+    margin-left: 10%;
+}
+
+.chat-app {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.chat-app h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.chat-app .message-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.chat-app .input-container {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-app .input-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.chat-app .input-container button {
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-app .input-container button:hover {
+    background-color: #303f9f;
+}
+
+/* Responsivitate */
+@media (max-width: 600px) {
+    .client-page-container {
+        padding: 15px;
+    }
+
+    .device-list-container h1 {
+        font-size: 1.5em;
+    }
+
+    .list-item-primary {
+        font-size: 1em;
+    }
+
+    .text-secondary {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 900px) {
+    .client-page-container {
+        flex-direction: column;
+    }
+
+    .device-list-container,
+    .chat-app {
+        width: 100%;
+        height: auto;
+    }
+
+    .chat-app {
+        margin-top: 20px;
+        border-left: none;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
