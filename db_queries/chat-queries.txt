@@ -1,0 +1,43 @@
+CREATE TABLE conversations (
+    id SERIAL PRIMARY KEY, 
+    participant1_id INT NOT NULL, 
+    participant2_id INT NOT NULL, 
+    status VARCHAR(20) NOT NULL DEFAULT 'active', 
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);
+
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY, 
+    conversation_id INT NOT NULL, 
+    sender_id INT NOT NULL,
+    receiver_id INT NOT NULL, 
+    message_text TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);
+
+CREATE TABLE users (
+    id BIGINT PRIMARY KEY, 
+    username VARCHAR(50) NOT NULL UNIQUE,
+    role VARCHAR(20) NOT NULL,
+	CONSTRAINT chk_user_role CHECK (role IN ('Administrator', 'Client'))
+);
+
+ALTER TABLE conversations
+ADD CONSTRAINT fk_participant1 FOREIGN KEY (participant1_id) REFERENCES users(id),
+ADD CONSTRAINT fk_participant2 FOREIGN KEY (participant2_id) REFERENCES users(id);
+
+ALTER TABLE messages
+ADD CONSTRAINT fk_conversation FOREIGN KEY (conversation_id) REFERENCES conversations(id),
+ADD CONSTRAINT fk_sender FOREIGN KEY (sender_id) REFERENCES users(id),
+ADD CONSTRAINT fk_receiver FOREIGN KEY (receiver_id) REFERENCES users(id);
+
+
+INSERT INTO conversations (participant1_id, participant2_id, status)
+VALUES (1, 2, 'active');
+
+
+INSERT INTO messages (conversation_id, sender_id, receiver_id, message_text)
+VALUES (1, 2, 1, 'Salut, am o problema cu device-ul');
+
+SELECT * FROM messages WHERE conversation_id = 1 ORDER BY sent_at;

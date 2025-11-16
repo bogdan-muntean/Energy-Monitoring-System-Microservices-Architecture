@@ -1,0 +1,15 @@
+CREATE TABLE hourly_consumption (
+    id BIGSERIAL PRIMARY KEY, 
+    device_id BIGINT NOT NULL, 
+    timestamp BIGINT NOT NULL, 
+    total_consumption DOUBLE PRECISION NOT NULL 
+);
+
+SELECT *
+FROM hourly_consumption
+
+CREATE TABLE device_hourly_limits (
+    id BIGSERIAL PRIMARY KEY,
+    device_id BIGINT NOT NULL,
+    max_hourly_energy_consumption DOUBLE PRECISION NOT NULL
+);
