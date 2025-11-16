@@ -147,54 +147,6 @@ Table:
     - triggers WebSocket alerts
 6. Clients see real-time consumption and notifications in the UI.
 
----
-
-## 📸 UI Preview (Screenshots)
-
-Below are several interface screenshots illustrating how the platform looks in action.
-
----
-
-### 🔐 Login Page
-
-The landing page where users can authenticate or navigate to registration.
-
-<img src="./imagini-prezentare-documentatie/login-page.png" width="650"/>
-
----
-
-### 📝 Register Page
-
-New users can create an account and choose their role (Admin or Client).
-
-<img src="./imagini-prezentare-documentatie/register-page.png" width="650"/>
-
----
-
-### 🛠️ Administrator Dashboard – User & Device Management (1)
-
-Admin users can add, update, delete and view all registered users and devices.
-
-<img src="./imagini-prezentare-documentatie/administrator-page-1.png" width="650"/>
-
----
-
-### 🛠️ Administrator Dashboard – User & Device Management (2)
-
-Detailed lists for managing device associations and user roles.
-
-<img src="./imagini-prezentare-documentatie/administrator-page-2.png" width="650"/>
-
----
-
-### 📊 Client Dashboard – Assigned Devices
-
-Clients can view their assigned devices, including address and maximum allowed hourly consumption.
-
-<img src="./imagini-prezentare-documentatie/client-page.png" width="650"/>
-
----
-
 ## 🔧 Environment Variables
 
 Each service requires a local .env file.
@@ -217,6 +169,44 @@ REDIS_PORT=6379
 
 RABBITMQ_USERNAME=your_rabbitmq_user
 RABBITMQ_PASSWORD=your_rabbitmq_password
+
+---
+
+## 📸 UI Preview (Screenshots)
+
+Below are several interface screenshots illustrating how the platform looks in action.
+
+### 🔐 Login Page
+
+The landing page where users can authenticate or navigate to registration.
+
+<img src="./imagini-prezentare-documentatie/login-page.png" width="650"/>
+
+### 📝 Register Page
+
+New users can create an account and choose their role (Admin or Client).
+
+<img src="./imagini-prezentare-documentatie/register-page.png" width="650"/>
+
+### 🛠️ Administrator Dashboard – User & Device Management (1)
+
+Admin users can add, update, delete and view all registered users and devices.
+
+<img src="./imagini-prezentare-documentatie/administrator-page-1.png" width="650"/>
+
+### 🛠️ Administrator Dashboard – User & Device Management (2)
+
+Detailed lists for managing device associations and user roles.
+
+<img src="./imagini-prezentare-documentatie/administrator-page-2.png" width="650"/>
+
+### 📊 Client Dashboard – Assigned Devices
+
+Clients can view their assigned devices, including address and maximum allowed hourly consumption.
+
+<img src="./imagini-prezentare-documentatie/client-page.png" width="650"/>
+
+---
 
 ## ▶️ Running the System (without Docker)
 
